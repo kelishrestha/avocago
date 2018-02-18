@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+    <link rel = "stylesheet" href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.js"></script>
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+      body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+      .flex {
+        display: flex;
+        flex-wrap: wrap;
+        min-height: 100vh;  /*or use calc(100vh - header_height)*/
+      }
+
+      main {
+        flex: 1 0 auto;
+      }
+
+      .text-uppercase{
+        text-transform: uppercase;
+      }
+
+      .title-divider{
+        height: 4px !important;
+      }
+
+      .ml-0{
+        margin-left: 0px !important;
+      }
+
+      .pl-0{
+        padding-left: 0px !important;
+      }
+
+      .mb-0{
+        margin-bottom: 0px;
+      }
+      .no-margin{
+        margin: 0px !important;
+      }
+      .no-padding{
+        padding: 0px !important;
+      }
+
+      .fullPage{
+        min-height: 100vh;
+      }
+      #navbar ul li a:hover{
+        background: #b71c1c;
+      }
+      .logo-padding{
+        margin-left: 30px;
+      }
+      .display {
+        display: inline !important;
+      }
+      .button-padding{
+        padding: 0px 10px;
+      }
+      .subheading{
+        color: grey;
+        font-size: 14px;
+      }
+      .bold{
+        font-weight: bold;
+      }
+      .reserveModal{
+        max-height: 80%;
+        width: 85%;
+      }
+      .teamPic{
+        max-width: 50%;
+      }
+      .teamBg{
+        background-image: 'http://del.h-cdn.co/assets/17/27/1600x800/landscape-1499467643-delish-avocado-pickles-1.jpg'
+      }
+    </style>
+    <!-- Custom CSS ends -->
+  </head>
+  <body>
+    <header>
+      <!-- Navbar -->
+      <div class="navbar-fixed" id="navbar">
+        <nav>
+          <div class="nav-wrapper blue-grey darken-4">
+            <a href="#!" class="brand-logo logo-padding">
+              <img src="images/logo.png">
+            </a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a href="#main" class="text-uppercase">Home</a></li>
+              <li><a href="#products" class="text-uppercase">Products</a></li>
+              <li><a class="g text-uppercase" href="#blog">insights</a></li>
+              <li><a href="#team" class="text-uppercase">Team</a></li>
+              <li><a href="#about" class="text-uppercase">about</a></li>
+              <li><a class="waves-effect waves-light btn green button-padding modal-trigger" href="#reserveModal"><i class="material-icons left">assignment_turned_in</i>Reserve A PopUp</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+              <li><a href="#main" class="text-uppercase">Home</a></li>
+              <li><a href="#products" class="text-uppercase">Products</a></li>
+              <li><a class="g text-uppercase" href="#insights">insights</a></li>
+              <li><a href="#team" class="text-uppercase">Team</a></li>
+              <li><a href="#about" class="text-uppercase">about</a></li>
+              <li><a class="waves-effect waves-light btn green button-padding modal-trigger" href="#reserveModal"><i class="material-icons left">assignment_turned_in</i>Reserve A PopUp</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- Navbar ends -->
+    </header>
+    <main>
+      <!-- Main -->
+      <div id="main" class="scrollspy">
+        <!-- Image Slider -->
+        <div class="slider">
+          <ul class="slides">
+            <li>
+              <img src="https://chicagotonight.wttw.com/sites/default/files/styles/full/public/article/image-non-gallery/kitchen-515388_1920_0.jpg?itok=9-CC9eAo"> <!-- random image -->
+              <div class="caption center-align">
+                <h3>This is our big Tagline!</h3>
+                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                <div class="section">
+                  <a class="waves-effect waves-light btn-large red darken-2" href="#products">See Products</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <img src="https://tr-images.condecdn.net/image/QNmLrnop4ne/crop/1620/f/Ghee-Prawns-Asparagus-with-dried-red-chillies-and-kalonji-and-Lamb-Kofta-at-darjeeling-express-restaurant-soho-london-conde-nast-traveller-20sept17-pr.jpg"> <!-- random image -->
+              <div class="caption left-align">
+                <h3>Left Aligned Caption</h3>
+                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                <div class="section">
+                  <a class="waves-effect waves-light btn-large red darken-2" href="#products">See Products</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <img src="https://eat24hours.com/files/cuisines/v4/open-24-hours.jpg?e24v=103?e24v=178?e24v=178"> <!-- random image -->
+              <div class="caption right-align">
+                <h3>Right Aligned Caption</h3>
+                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                <div class="section">
+                  <a class="waves-effect waves-light btn-large red darken-2" href="#products">See Products</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- Image Slider Ends-->
+      </div>
+
+      <!-- Products -->
+      <div id="products" class="section flex scrollspy">
+        <div class="row">
+          <div class="section center">
+            <h4 class="text-uppercase center">Our Products</h4>
+            <p>
+              We give you healthy smoothies and yogurt products
+            </p>
+          </div>
+          <div class="col s12 m3 offset-m2">
+            <div class="card small">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="http://ddn.i.ntere.st/p/8840487/image">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Product Name<i class="material-icons right">more_vert</i></span>
+                <span class="new badge left" data-badge-caption="200.00">Rs.</span>
+                <a href="#orderModal" class="btn waves-effect button-padding green right modal-trigger"><i class="material-icons left">shopping_basket</i>Order Now</a>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Product Name<i class="material-icons right">close</i></span>
+                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m3">
+            <div class="card small">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="http://ddn.i.ntere.st/p/8840487/image">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Product Name<i class="material-icons right">more_vert</i></span>
+                <span class="new badge left" data-badge-caption="200.00">Rs.</span>
+                <a href="#orderModal" class="btn waves-effect button-padding green right modal-trigger"><i class="material-icons left">shopping_basket</i>Order Now</a>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Product Name<i class="material-icons right">close</i></span>
+                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m3">
+            <div class="card small">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="http://ddn.i.ntere.st/p/8840487/image">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Product Name<i class="material-icons right">more_vert</i></span>
+                <span class="new badge left" data-badge-caption="200.00">Rs.</span>
+                <a href="#orderModal" class="btn waves-effect button-padding green right modal-trigger"><i class="material-icons left">shopping_basket</i>Order Now</a>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Product Name<i class="material-icons right">close</i></span>
+                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m3 offset-m3">
+            <div class="card small">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="http://ddn.i.ntere.st/p/8840487/image">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Product Name<i class="material-icons right">more_vert</i></span>
+                <span class="new badge left" data-badge-caption="200.00">Rs.</span>
+                <a href="#orderModal" class="btn waves-effect button-padding green right modal-trigger"><i class="material-icons left">shopping_basket</i>Order Now</a>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Product Name<i class="material-icons right">close</i></span>
+                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m3">
+            <div class="card small">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="http://ddn.i.ntere.st/p/8840487/image">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Product Name<i class="material-icons right">more_vert</i></span>
+                <span class="new badge left" data-badge-caption="200.00">Rs.</span>
+                <a href="#orderModal" class="btn waves-effect button-padding green right modal-trigger"><i class="material-icons left">shopping_basket</i>Order Now</a>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Product Name<i class="material-icons right">close</i></span>
+                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- insights -->
+      <div id="insights" class="section blue-grey darken-4 flex scrollspy">
+        <div class="row">
+          <h4 class="text-uppercase center white-text">insights</h4>
+          <div class="section container">
+            <div class="col s12 m12 l12 xl12">
+              <div class="card">
+                <div class="card-content">
+                  <span class="card-title">
+                    Avocado
+                    <span class="subheading">A Super Fruit</span>
+                  </span>
+                  <p>
+                    <div class="section">
+                      Avocado refers to the tree's fruit, which is botanically a large berry containing a single large seed.
+                      The word "avocado" comes from the Spanish aguacate, which in turn comes from the Nahuatl word āhuacatl, which goes back to the proto-Aztecan *pa:wa which also meant "avocado".
+                    </div>
+                    <div class="section">
+                      The modern English name comes from an English rendering of the Spanish aguacate as avogato. The earliest known written use in English is attested from 1697 as "avogato pear", a term which was later corrupted as "alligator pear".
+                      Because the word avogato sounded like "advocate", several languages reinterpreted it to have that meaning. French uses avocat, which also means lawyer, and "advocate"-forms of the word appear in several Germanic languages, such as the (now obsolete) German Advogato-Birne, the old Danish advokat-pære (today it is called "avocado") and the Dutch advocaatpeer.
+                    </div>
+                  </p>
+                  <div class="section">
+                    <h6 class="bold">Benefits</h6>
+                    <ol>
+                      <li>Avocados are nutrient rich</li>
+                      <li>Healthy for the heart</li>
+                      <li>Great for vision</li>
+                      <li>Osteoporosis prevention</li>
+                      <li>Cancer</li>
+                      <li>Healthy babies</li>
+                      <li>Lower risk of depression</li>
+                      <li>Improved digestion</li>
+                      <li>Natural detoxification</li>
+                      <li>Osteoporosis treatment</li>
+                      <li>Antimicrobial action</li>
+                      <li>Protection from chronic disease</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+              <div class="divider"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="team" class="section flex scrollspy teamBg">
+        <div class="row">
+          <h4 class="text-uppercase center-align">Meet The Advocates</h4>
+        </div>
+        <div class="slider" id="teamslider">
+          <ul class="slides green">
+            <li>
+              <img src="https://assets.epicurious.com/photos/59359912f7f8006f0d5b5cde/2:1/w_1260%2Ch_630/Screen%20Shot%202017-06-05%20at%201.45.55%20PM.png"> <!-- random image -->
+              <div class="caption left-align black-text valign-wrapper">
+                <h3>Shreeya Sharma</h3>
+                <img src="http://ddn.i.ntere.st/p/8840487/image" class="left teamPic"> <!-- random image -->
+              </div>
+            </li>
+            <li>
+              <img src="https://assets.epicurious.com/photos/59359912f7f8006f0d5b5cde/2:1/w_1260%2Ch_630/Screen%20Shot%202017-06-05%20at%201.45.55%20PM.png"> <!-- random image -->
+              <div class="caption left-align black-text valign-wrapper">
+                <h3>Samita Kapali</h3>
+                <img src="http://ddn.i.ntere.st/p/8840487/image" class="left teamPic"> <!-- random image -->
+              </div>
+            </li>
+            <li>
+              <img src="https://assets.epicurious.com/photos/59359912f7f8006f0d5b5cde/2:1/w_1260%2Ch_630/Screen%20Shot%202017-06-05%20at%201.45.55%20PM.png"> <!-- random image -->
+              <div class="caption left-align black-text valign-wrapper">
+                <h3>Stephanie</h3>
+                <img src="http://ddn.i.ntere.st/p/8840487/image" class="left teamPic"> <!-- random image -->
+              </div>
+            </li>
+            <li>
+              <img src="https://assets.epicurious.com/photos/59359912f7f8006f0d5b5cde/2:1/w_1260%2Ch_630/Screen%20Shot%202017-06-05%20at%201.45.55%20PM.png"> <!-- random image -->
+              <div class="caption left-align black-text valign-wrapper">
+                <h3>Madhuri Shrestha</h3>
+                <img src="http://ddn.i.ntere.st/p/8840487/image" class="left teamPic"> <!-- random image -->
+              </div>
+            </li>
+            <li>
+              <img src="https://assets.epicurious.com/photos/59359912f7f8006f0d5b5cde/2:1/w_1260%2Ch_630/Screen%20Shot%202017-06-05%20at%201.45.55%20PM.png"> <!-- random image -->
+              <div class="caption left-align black-text valign-wrapper">
+                <h3>Kelina Shrestha</h3>
+                <img src="http://ddn.i.ntere.st/p/8840487/image" class="left teamPic"> <!-- random image -->
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="about" class="section flex scrollspy">
+        <div class="row">
+          <div class="col s12 m12 l12 xl12">
+            <h4 class="text-uppercase center-align">About Us</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reserve Modal Structure -->
+      <div id="reserveModal" class="modal reserveModal">
+        <div class="modal-content">
+          <h4 class="header"><i class="material-icons left small">assignment_turned_in</i>Reserve a PopUp</h4>
+          <div class="card z-depth-2">
+            <div class="card-content">
+              <div class="row">
+                <form class="col s12">
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="name" type="text" class="validate">
+                      <label for="name">Name</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s8">
+                      <input id="email" type="email" class="validate">
+                      <label for="email">Email</label>
+                    </div>
+                    <div class="input-field col s4">
+                      <input id="phone" type="text">
+                      <label for="phone">Phone Number</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s6">
+                      <input id="location" type="text">
+                      <label for="location">Location</label>
+                    </div>
+                    <div class="input-field col s3">
+                      <input type="text" class="timepicker" id="start_time">
+                      <label for="start_time">Start Time</label>
+                    </div>
+                    <div class="input-field col s3">
+                      <input type="text" class="timepicker" id="end_time">
+                      <label for="end_time">End Time</label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-action modal-close waves-effect waves-green btn">Submit</a>
+        </div>
+      </div>
+
+      <!-- Order Modal Structure -->
+      <div id="orderModal" class="modal">
+        <div class="modal-content">
+          <h4 class="header"><i class="material-icons left small">shopping_basket</i>Order Form</h4>
+          <div class="card z-depth-2">
+            <div class="card-content">
+              <div class="row">
+                <form class="col s12">
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="name" type="text" class="validate">
+                      <label for="name">Name</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s8">
+                      <input id="email" type="email" class="validate">
+                      <label for="email">Email</label>
+                    </div>
+                    <div class="input-field col s4">
+                      <input id="phone" type="text">
+                      <label for="phone">Phone Number</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="location" type="text">
+                      <label for="location">Location</label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-action modal-close waves-effect waves-green btn">Submit</a>
+        </div>
+      </div>
+
+
+    </main>
+
+    <footer class="page-footer blue-grey darken-4">
+      <div class="footer-copyright logo-padding">
+        © 2018 All Rights Reserved
+      </div>
+    </footer>
+
+    <!-- Javascripts -->
+    <script type="text/javascript">
+      $( document ).ready(function(){
+        $('.modal').modal();
+        // Initialize collapse button
+        $(".button-collapse").sideNav();
+        // Slider
+        $('.slider').slider({ height: 750, indicators: false});
+        $('#teamslider .slider').slider({ height: 334, indicators: false});
+        $('.scrollspy').scrollSpy();
+        $('.tooltipped').tooltip({delay: 50});
+        $('.timepicker').pickatime({
+          default: 'now', // Set default time: 'now', '1:30AM', '16:30'
+          fromnow: 0,       // set default time to * milliseconds from now (using with default = 'now')
+          twelvehour: false, // Use AM/PM or 24-hour format
+          donetext: 'OK', // text for done-button
+          cleartext: 'Clear', // text for clear-button
+          canceltext: 'Cancel', // Text for cancel-button
+          autoclose: false, // automatic close timepicker
+          ampmclickable: true, // make AM PM clickable
+          aftershow: function(){} //Function for after opening timepicker
+        });
+      })
+    </script>
+  </body>
+</html>
