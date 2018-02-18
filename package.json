@@ -1,0 +1,29 @@
+{
+  "name": "avocago",
+  "version": "1.0.0",
+  "description": "Avocago Website",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kelishrestha/avocago.git"
+  },
+  "keywords": [
+    "avocago"
+  ],
+  "author": "Kelina Shrestha, Madhuri Shrestha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kelishrestha/avocago/issues"
+  },
+  "homepage": "https://github.com/kelishrestha/avocago#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.15.0"
+  }
+}
